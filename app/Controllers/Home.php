@@ -6,6 +6,12 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('welcome_message');
+
+        $komentar = [
+            'komentar' => $this->komentarModel->findAll()
+        ];
+
+        return view('halaman_welcome', $komentar);
+    }
     }
 }
