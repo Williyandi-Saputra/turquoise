@@ -119,3 +119,28 @@ class Home extends BaseController
 
         return view('tables_user', $data);
     }
+
+    public function addUser()
+    {
+        $nilai = $this->userModel->save([
+            "username" => $this->request->getPost('username'),
+            "nama" => $this->request->getPost('nama'),
+            "email" => $this->request->getPost('email'),
+            "password" => $this->request->getPost('password'),
+            "alamat" => $this->request->getPost('alamat'),
+            "jenis_kelamin" => $this->request->getPost('jenis_kelamin'),
+            "type" => "user",
+        ]);
+
+        if ($nilai == 1) {
+            echo "Berhasil Disimpan";
+            $check = true;
+            $time = 60 * 9999;
+            session()->setTempData("is_login", true, $time);
+        } else {
+            echo "Gagal Disimpan";
+        }
+
+        return $check ? redirect()->to(base_url() . "/login") : redirect()->to(base_url() . "/register");
+    }
+}
