@@ -85,3 +85,8 @@ class Home extends BaseController
     {
         return view('diskon_birthday');
     }
+
+    public function jumat_berkah()
+    {
+        return view('jumat_berkah');
+    }
