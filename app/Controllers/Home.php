@@ -105,3 +105,8 @@ class Home extends BaseController
 
         return $check ? view('dashboard') : redirect()->to(base_url());
     }
+
+    public function EditUser()
+    {
+        return view('edit-user');
+    }
