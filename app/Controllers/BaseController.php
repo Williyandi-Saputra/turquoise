@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\UserModel;
 use App\Models\ProdukModel;
 use App\Models\KomentarModel;
+use App\Models\KeranjangModel;
 use CodeIgniter\Controller;
 use CodeIgniter\HTTP\CLIRequest;
 use CodeIgniter\HTTP\IncomingRequest;
@@ -54,5 +55,6 @@ abstract class BaseController extends Controller
         $this->userModel = new UserModel();
         $this->produkModel = new ProdukModel();
         $this->komentarModel = new KomentarModel();
+        $this->keranjangModel = new KeranjangModel();
     }
 }
