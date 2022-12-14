@@ -36,6 +36,15 @@ class Produk extends BaseController
     {
         return view('tambah_produk');
     }
+
+    public function table_produk()
+    {
+        $data = [
+            'produk' => $this->produkModel->findAll()
+        ];
+
+        return view('tables_produk', $data);
+    }
     {
         return view('welcome_message');
     }
