@@ -110,3 +110,12 @@ class Home extends BaseController
     {
         return view('edit-user');
     }
+
+    public function Table()
+    {
+        $data = [
+            'user' => $this->userModel->findAll()
+        ];
+
+        return view('tables_user', $data);
+    }
