@@ -31,5 +31,22 @@ class Admin extends BaseController
 
         return redirect()->to(base_url() . "/");
     }
+
+    public function deleteUser()
+    {
+        $id = $this->request->getPost('id');
+
+        if (session()->getTempData("is_login")) {
+            $nilai = $this->userModel->delete($id);
+        } else $nilai = 0;
+
+        if ($nilai == 1) {
+            session()->setFlashData("data", "Data berhasil dihapus");
+        } else {
+            session()->setFlashData("data", "Data gagal dihapus");
+        }
+
+        return session()->getTempData("is_login") ? redirect()->to(base_url() . "/tables") : redirect()->to(base_url());
+    }
     }
 }
