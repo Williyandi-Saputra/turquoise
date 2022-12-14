@@ -2,10 +2,24 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController
+class Keranjang extends BaseController
 {
-    public function index()
+    public function AddProdukToKeranjang()
     {
-        return view('welcome_message');
+        $keranjang = $this->keranjangModel->save([
+            "produk" => $this->request->getPost('id_produk')
+        ]);
+
+        echo $this->request->getPost('id_produk');
+
+        if ($keranjang == 1) {
+            echo " Berhasil menambahkan produk ke keranjang";
+            $check = true;
+            session()->settempData("role", true);
+        } else {
+            echo "gagal menambahkan";
+        }
+
+        return $check ? redirect()->to(base_url() . "/") : redirect()->to(base_url() . "/tentang");
     }
 }
