@@ -27,3 +27,12 @@ class Home extends BaseController
     {
         return view('about');
     }
+
+    public function Menu()
+    {
+        $menu = [
+            'menu' => $this->produkModel->findAll()
+        ];
+
+        return view('menu', $menu);
+    }
