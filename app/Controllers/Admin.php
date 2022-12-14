@@ -64,5 +64,22 @@ class Admin extends BaseController
 
         return view('edit-user', $data);
     }
+
+    public function updateUser()
+    {
+
+        $nilai = $this->userModel->save([
+            "id" => $this->request->getPost('id'),
+            "username" => $this->request->getPost('username'),
+            "nama" => $this->request->getPost('nama'),
+            "email" => $this->request->getPost('email'),
+            "password" => $this->request->getPost('password'),
+            "alamat" => $this->request->getPost('alamat'),
+            "jenis_kelamin" => $this->request->getPost('jenis_kelamin'),
+            "type" => $this->request->getPost('type'),
+        ]);
+
+        return redirect()->to(base_url() . "/tables");
+    }
     }
 }
