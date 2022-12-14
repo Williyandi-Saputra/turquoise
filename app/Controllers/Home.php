@@ -90,3 +90,8 @@ class Home extends BaseController
     {
         return view('jumat_berkah');
     }
+
+    public function tambah_user()
+    {
+        return view('tambah_user_dari_admin');
+    }
