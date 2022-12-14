@@ -46,3 +46,12 @@ class Home extends BaseController
     {
         return view('register');
     }
+
+    public function Komentar()
+    {
+        $komentar = [
+            'komentar' => $this->komentarModel->findAll()
+        ];
+
+        return session()->getTempData('is_login') ? view('komentar', $komentar) : redirect()->to(base_url() . "/login");
+    }
