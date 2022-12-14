@@ -75,3 +75,8 @@ class Home extends BaseController
     {
         return view('contoh-komentar');
     }
+
+    public function Keranjang()
+    {
+        return view('keranjang');
+    }
