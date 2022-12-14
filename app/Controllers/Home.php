@@ -65,3 +65,8 @@ class Home extends BaseController
     {
         return view('login');
     }
+
+    public function Hii()
+    {
+        return view('hii');
+    }
