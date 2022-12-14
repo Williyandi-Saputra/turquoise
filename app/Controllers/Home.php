@@ -60,3 +60,8 @@ class Home extends BaseController
     {
         return view('read-more');
     }
+
+    public function Loginn()
+    {
+        return view('login');
+    }
