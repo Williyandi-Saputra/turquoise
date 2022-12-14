@@ -36,3 +36,8 @@ class Home extends BaseController
 
         return view('menu', $menu);
     }
+
+    public function Contact()
+    {
+        return view('contact');
+    }
