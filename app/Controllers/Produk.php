@@ -45,7 +45,21 @@ class Produk extends BaseController
 
         return view('tables_produk', $data);
     }
+
+    public function deleteUser()
     {
-        return view('welcome_message');
+        $id_produk = $this->request->getPost('id_produk');
+
+        if (session()->getTempData("is_login")) {
+            $nilai = $this->produkModel->delete($id_produk);
+        } else $nilai = 0;
+
+        if ($nilai == 1) {
+            session()->setFlashData("data", "Data berhasil dihapus");
+        } else {
+            session()->setFlashData("data", "Data gagal dihapus");
+        }
+
+        return session()->getTempData("is_login") ? redirect()->to(base_url() . "/table_produk") : redirect()->to(base_url());
     }
 }
