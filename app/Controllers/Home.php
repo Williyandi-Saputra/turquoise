@@ -22,4 +22,8 @@ class Home extends BaseController
 
         return view('halaman_welcome', $komentar);
     }
-}
+
+    public function About()
+    {
+        return view('about');
+    }
