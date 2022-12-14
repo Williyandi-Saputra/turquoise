@@ -23,5 +23,13 @@ class Admin extends BaseController
 
         return $check ? redirect()->to(base_url() . "/home") : redirect()->to(base_url() . "/login");
     }
+
+    public function logout()
+    {
+        session()->setTempData("is_login", false);
+        session()->setTempData("role", "");
+
+        return redirect()->to(base_url() . "/");
+    }
     }
 }
