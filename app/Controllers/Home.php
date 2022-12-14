@@ -41,3 +41,8 @@ class Home extends BaseController
     {
         return view('contact');
     }
+
+    public function Register()
+    {
+        return view('register');
+    }
