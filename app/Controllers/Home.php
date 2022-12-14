@@ -55,3 +55,8 @@ class Home extends BaseController
 
         return session()->getTempData('is_login') ? view('komentar', $komentar) : redirect()->to(base_url() . "/login");
     }
+
+    public function read_more()
+    {
+        return view('read-more');
+    }
