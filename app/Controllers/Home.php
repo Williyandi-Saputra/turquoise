@@ -80,3 +80,8 @@ class Home extends BaseController
     {
         return view('keranjang');
     }
+
+    public function birtday()
+    {
+        return view('diskon_birthday');
+    }
