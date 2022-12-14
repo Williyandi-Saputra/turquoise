@@ -2,10 +2,26 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController
+class Admin extends BaseController
 {
-    public function index()
+    public function Login()
     {
-        return view('welcome_message');
+        $data = $this->userModel->findAll();
+        $check = false;
+
+        $username = $this->request->getPost('InputUsername');
+        $password = $this->request->getPost('InputPassword');
+
+        foreach ($data as $f) {
+            if (strcmp($f['username'], $username) == 0 && strcmp($f['password'], $password) == 0) {
+                $check = true;
+                $time = 60 * 99999;
+                session()->setTempData("is_login", true, $time);
+                session()->setTempData("role", $f['type'], $time);
+            }
+        }
+
+        return $check ? redirect()->to(base_url() . "/home") : redirect()->to(base_url() . "/login");
+    }
     }
 }
