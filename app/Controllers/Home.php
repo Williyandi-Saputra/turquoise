@@ -95,3 +95,13 @@ class Home extends BaseController
     {
         return view('tambah_user_dari_admin');
     }
+
+    public function Dashboard()
+    {
+        $checkSession = session()->getTempData('is_login');
+        $checkRole = (strcmp(session()->getTempData('role'), 'admin') == 0);
+
+        $check = ($checkRole && $checkSession);
+
+        return $check ? view('dashboard') : redirect()->to(base_url());
+    }
