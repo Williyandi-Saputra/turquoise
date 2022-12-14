@@ -70,3 +70,8 @@ class Home extends BaseController
     {
         return view('hii');
     }
+
+    public function contoh_komentar()
+    {
+        return view('contoh-komentar');
+    }
