@@ -31,6 +31,11 @@ class Produk extends BaseController
 
         return $check ? redirect()->to(base_url() . "/menu") : redirect()->to(base_url() . "/dashboard");
     }
+
+    public function Produk()
+    {
+        return view('tambah_produk');
+    }
     {
         return view('welcome_message');
     }
