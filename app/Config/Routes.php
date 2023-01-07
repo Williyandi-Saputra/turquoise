@@ -52,8 +52,6 @@ $routes->get('hii', 'Home::Hii');
 $routes->get('birthday-diskon', 'Home::birtday');
 $routes->get('jumat-berkah', 'Home::jumat_berkah');
 $routes->get('add-user', 'Home::tambah_user');
-$routes->get('tambah_produk', 'Produk::Produk');
-$routes->get('table_produk', 'Produk::table_produk');
 
 // VALIDASI
 $routes->post('login', 'Admin::Login');
@@ -66,8 +64,6 @@ $routes->post('edit-pengguna', 'Admin::directUpdateUser');
 $routes->post('edit-cok', 'Admin::Updateuser');
 
 // TAMBAH PRODUK
-$routes->post('tambah-produk', 'Produk::addProduk');
-$routes->post('hapus-produk', 'Produk::deleteUser');
 $routes->get('direct_whatsApp', 'Produk::directWhatsApp');
 
 // KOMENTAR
@@ -78,6 +74,12 @@ $routes->post('tambah_keranjang', 'Keranjang::AddProdukToKeranjang');
 
 // TAMBAH USER DARI ADMIN
 $routes->post('tambah_user_admin', 'Admin::addUserAdmin');
+
+/* Produk */
+$routes->get('table_produk', 'Produk::table_produk');
+$routes->post('tambah-produk', 'Produk::addProduk');
+$routes->post('hapus-produk', 'Produk::deleteProduk');
+
 
 /*
  * --------------------------------------------------------------------
