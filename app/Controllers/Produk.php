@@ -37,7 +37,7 @@ class Produk extends BaseController
             'produk' => $this->produkModel->findAll()
         ];
 
-        return view('tables_produk', $data);
+        return view('dashboard/tables_produk', $data);
     }
 
     public function deleteProduk()
