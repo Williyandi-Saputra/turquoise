@@ -103,7 +103,7 @@ class Home extends BaseController
 
         $check = ($checkRole && $checkSession);
 
-        return $check ? view('dashboard') : redirect()->to(base_url());
+        return $check ? view('dashboard/dashboard') : redirect()->to(base_url());
     }
 
     public function EditUser()
