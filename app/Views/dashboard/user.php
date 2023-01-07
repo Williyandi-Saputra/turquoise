@@ -66,7 +66,7 @@
                     <span> User </span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="table_produk">
+                <a class="nav-link" href="produk">
                     <i class="fas fa-fw fa-address-book"></i>
                     <span> Produk </span></a>
             </li>
@@ -304,7 +304,7 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <form class="user" method="post" action="tambah_user_admin">
+                                <form class="user" method="post" action="user">
                                 <div class="form-group">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         
@@ -359,7 +359,7 @@
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-user btn-block">
-                                    Register Account
+                                    SIMPAN
                                 </button>
                                 <hr>
                                
@@ -399,7 +399,7 @@
                                             <td><?= $d['nama'] ?></td>
                                             <td><?= $d['email'] ?></td>
                                             <td> 
-                                                <form action="hapus-pengguna" method="post">
+                                                <form action="delete_user" method="post">
                                                     <input type="hidden" name="id" value="<?= $d['id'] ?>">
                                                     <button class="btn btn-danger" type="submit">Hapus</button>
                                                 </form>
