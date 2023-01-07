@@ -79,8 +79,8 @@ $routes->post('user', 'User::addUser');
 $routes->post('delete_user', 'User::deleteUser');
 
 /* Dashbaord Produk */
-$routes->get('table_produk', 'Produk::table_produk');
-$routes->post('tambah-produk', 'Produk::addProduk');
+$routes->get('produk', 'Produk::get_produk');
+$routes->post('produk', 'Produk::addProduk');
 $routes->post('hapus-produk', 'Produk::deleteProduk');
 
 
