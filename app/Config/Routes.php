@@ -70,9 +70,6 @@ $routes->post('tambah_komentar', 'Komentar::inputKomentar');
 // MASUKAN MENU KE KERANJANG 
 $routes->post('tambah_keranjang', 'Keranjang::AddProdukToKeranjang');
 
-// TAMBAH USER DARI ADMIN
-$routes->post('tambah_user_admin', 'Admin::addUserAdmin');
-
 /* Dashboard User */
 $routes->get('user', 'User::getUser');
 $routes->post('user', 'User::addUser');
