@@ -7,10 +7,9 @@ class Produk extends BaseController
 
     public function addProduk()
     {
-
         $image = $this->request->getFile('image');
         $nama = $image->getRandomName();
-        $image->move(NAMA_FOLDER . "/images", $nama);
+        $image->move("riter/images", $nama);
 
         $nilai = $this->produkModel->save([
             "nama_produk" => $this->request->getPost('nama_produk'),
@@ -29,12 +28,7 @@ class Produk extends BaseController
             echo "Gagal Disimpan";
         }
 
-        return $check ? redirect()->to(base_url() . "/menu") : redirect()->to(base_url() . "/dashboard");
-    }
-
-    public function Produk()
-    {
-        return view('tambah_produk');
+        return session()->getTempData("is_login") ? redirect()->to(base_url() . "/table_produk") : redirect()->to(base_url());
     }
 
     public function table_produk()
@@ -46,7 +40,7 @@ class Produk extends BaseController
         return view('tables_produk', $data);
     }
 
-    public function deleteUser()
+    public function deleteProduk()
     {
         $id_produk = $this->request->getPost('id_produk');
 
