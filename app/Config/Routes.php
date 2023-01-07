@@ -58,8 +58,6 @@ $routes->post('login', 'Admin::Login');
 $routes->get('logout', 'Admin::logout');
 
 /* View User */
-$routes->get('tables', 'Home::Table');
-$routes->post('hapus-pengguna', 'Admin::deleteUser');
 $routes->post('edit-pengguna', 'Admin::directUpdateUser');
 $routes->post('edit-cok', 'Admin::Updateuser');
 
@@ -75,7 +73,12 @@ $routes->post('tambah_keranjang', 'Keranjang::AddProdukToKeranjang');
 // TAMBAH USER DARI ADMIN
 $routes->post('tambah_user_admin', 'Admin::addUserAdmin');
 
-/* Produk */
+/* Dashboard User */
+$routes->get('user', 'User::getUser');
+$routes->post('user', 'User::addUser');
+$routes->post('delete_user', 'User::deleteUser');
+
+/* Dashbaord Produk */
 $routes->get('table_produk', 'Produk::table_produk');
 $routes->post('tambah-produk', 'Produk::addProduk');
 $routes->post('hapus-produk', 'Produk::deleteProduk');
