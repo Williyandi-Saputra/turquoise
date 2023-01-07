@@ -59,7 +59,7 @@
                     <span> User </span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="table_produk">
+                <a class="nav-link" href="produk">
                     <i class="fas fa-fw fa-address-book"></i>
                     <span> Produk </span></a>
             </li>
@@ -297,7 +297,7 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <form class="user" method="post" action="tambah-produk" enctype="multipart/form-data">
+                                <form class="user" method="post" action="produk" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user" name="nama_produk"
                                                 placeholder="Nama Produk">
@@ -324,7 +324,7 @@
                                             <input class="form-control" type="file" name="image">
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
-                                            Tambah Produk
+                                            SIMPAN
                                         </button>
                                         <hr>
                                     </form>
@@ -389,7 +389,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Copyright &copy; Riter Bakery 2023</span>
                     </div>
                 </div>
             </footer>
