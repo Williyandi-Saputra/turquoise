@@ -28,16 +28,16 @@ class Produk extends BaseController
             echo "Gagal Disimpan";
         }
 
-        return session()->getTempData("is_login") ? redirect()->to(base_url() . "/table_produk") : redirect()->to(base_url());
+        return session()->getTempData("is_login") ? redirect()->to(base_url() . "/produk") : redirect()->to(base_url());
     }
 
-    public function table_produk()
+    public function get_produk()
     {
         $data = [
             'produk' => $this->produkModel->findAll()
         ];
 
-        return view('dashboard/tables_produk', $data);
+        return view('dashboard/produk', $data);
     }
 
     public function deleteProduk()
@@ -54,6 +54,6 @@ class Produk extends BaseController
             session()->setFlashData("data", "Data gagal dihapus");
         }
 
-        return session()->getTempData("is_login") ? redirect()->to(base_url() . "/table_produk") : redirect()->to(base_url());
+        return session()->getTempData("is_login") ? redirect()->to(base_url() . "/produk") : redirect()->to(base_url());
     }
 }
