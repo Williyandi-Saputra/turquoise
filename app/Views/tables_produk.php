@@ -27,12 +27,10 @@
 
 <body id="page-top">
 
-    <!-- Page Wrapper -->
     <div id="wrapper">
 
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
@@ -40,112 +38,30 @@
                 </div>
                 <div class="sidebar-brand-text mx-3">Riter Bakery</div>
             </a>
-
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-
-            <!-- Divider -->
-            <!-- <hr class="sidebar-divider"> -->
-
-            <!-- Heading -->
-            <!-- <div class="sidebar-heading">
-                Interface
-            </div> -->
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-
-                        <?php
-                        //    session()->setTempData('role', '1');
-
-                           if(strcmp(session()->getTempData('role'), '1') == 0){
-
-                        ?>
-
-                        <a class="collapse-item" href="cards.html">Cards</a>
-
-                        <?php } ?>
-
-                    </div>
-                </div>
-            </li> -->
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <!-- <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
-            </li> -->
-
             <!-- Divider -->
             <hr class="sidebar-divider">
-
             <!-- Heading -->
             <div class="sidebar-heading">
                 Data
             </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Tambah Data</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="add-user"> Tamba Data User </a>
-                        <a class="collapse-item" href="tambah_produk"> Tambah Data Produk </a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li> -->
-
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="tables">
                     <i class="fas fa-fw fa-table"></i>
-                    <span> Table User </span></a>
+                    <span> User </span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="table_produk">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span> Table Produk </span></a>
+                    <i class="fas fa-fw fa-address-book"></i>
+                    <span> Produk </span></a>
             </li>
 
             <!-- Divider -->
@@ -374,16 +290,51 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <form action="tambah_produk" method="get">
-
-                    <button class="btn btn-info mb-4 " type="submit"> Tambah Produk </button>
-
-                    </form>
-
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Tambah Produk</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <form class="user" method="post" action="tambah-produk" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user" name="nama_produk"
+                                                placeholder="Nama Produk">
+                                        </div>                                       
+                                        <div class="form-group">
+                                            <select class="form-control" name="jenis_produk">
+                                                <option> - Jenis Produk - </option>
+                                                <option value="roti"> Roti </option>
+                                                <option value="kue"> Kue </option>
+                                                <option value="pie"> Pie </option>
+                                                <option value="pastry"> Pastry </option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user" name="deskripsi_produk"
+                                                placeholder="Deskripsi Produk">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control form-control-user" name="harga_produk"
+                                                placeholder="Harga Produk">
+                                        </div>
+                                        <div class="mb-3">
+                                             <label for="formFile" class="form-label"> Pilih gambar </label>
+                                            <input class="form-control" type="file" name="image">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                                            Tambah Produk
+                                        </button>
+                                        <hr>
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Data Produk</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -400,11 +351,9 @@
                                         
                                     <tbody>
                                     <?php 
-
                                     $nomor = 0;
                                     foreach ($produk as $p) {
                                         $nomor++;
-
 
                                     ?>
                                         <tr>
@@ -421,25 +370,10 @@
                                             </td>
                                         </tr>
 
-                                    <?php 
-
-                                    }
-
-                                    ?>
+                                    <?php } ?>
                                     
                                     </tbody>
                                     
-                                    <!-- <tfoot>
-                                      <tr>
-                                            <th>No</th>
-                                            <th>ID</th>
-                                            <th>Username</th>
-                                            <th>Nama</th>
-                                            <th>Email</th>
-                                            <th>Password</th>
-                                        </tr>
-                                
-                                    </tfoot> -->
                                 </table>
                             </div>
                         </div>
