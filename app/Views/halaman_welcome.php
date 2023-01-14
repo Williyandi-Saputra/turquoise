@@ -55,7 +55,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  mx-auto ">
             <li class="nav-item active">
-                <a class="nav-link" href="home">Home<span class="sr-only">(current)</span> </a> 
+                <a class="nav-link" href="">Home<span class="sr-only">(current)</span> </a> 
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="menu">Menu</a>
@@ -1006,7 +1006,7 @@
             <p>
             Riter Bakery adalah toko yang bergerak di bidang makanan yaitu pembuat kue dan berbagai makanan lainnya. Kami memilih usaha di bidang makanan karena usaha di sesuaikan dengan kebutuhan dan dengan skill yang kami miliki serta faktor pendukung yang memandai untuk mengembangkan usaha ini dan kami sepakat membuat....
             </p>
-            <a href="tentang-readmore">
+            <a href="">
               Baca Selengkapnya
             </a>
           </div>
