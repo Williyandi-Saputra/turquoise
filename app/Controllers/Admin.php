@@ -49,39 +49,6 @@ class Admin extends BaseController
         return session()->getTempData("is_login") ? redirect()->to(base_url() . "/tables") : redirect()->to(base_url());
     }
 
-    public function directUpdateUser()
-    {
-        $data = [
-            'id' => $this->request->getPost('id'),
-            'username' => $this->request->getPost('username'),
-            'nama' => $this->request->getPost('nama'),
-            'email' => $this->request->getPost('email'),
-            'password' => $this->request->getPost('password'),
-            'alamat' => $this->request->getPost('alamat'),
-            'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
-            'type' => $this->request->getPost('type')
-        ];
-
-        return view('edit-user', $data);
-    }
-
-    public function updateUser()
-    {
-
-        $nilai = $this->userModel->save([
-            "id" => $this->request->getPost('id'),
-            "username" => $this->request->getPost('username'),
-            "nama" => $this->request->getPost('nama'),
-            "email" => $this->request->getPost('email'),
-            "password" => $this->request->getPost('password'),
-            "alamat" => $this->request->getPost('alamat'),
-            "jenis_kelamin" => $this->request->getPost('jenis_kelamin'),
-            "type" => $this->request->getPost('type'),
-        ]);
-
-        return redirect()->to(base_url() . "/tables");
-    }
-
     public function addUserAdmin()
     {
         $nilai = $this->userModel->save([
