@@ -41,17 +41,8 @@ $routes->get('menu', 'Home::Menu');
 $routes->get('tentang', 'Home::About');
 $routes->get('contact', 'Home::Contact');
 $routes->get('komentar', 'Home::Komentar');
-$routes->get('register', 'Home::Register');
 $routes->get('dashboard', 'Home::Dashboard');
-$routes->get('tentang-readmore', 'Home::read_more');
 $routes->get('login', 'Home::Loginn');
-$routes->post('tambah_user', 'Home::addUser');
-$routes->get('keranjang', 'Home::Keranjang');
-$routes->post('edit-user', 'Home::EditUser');
-$routes->get('hii', 'Home::Hii');
-$routes->get('birthday-diskon', 'Home::birtday');
-$routes->get('jumat-berkah', 'Home::jumat_berkah');
-$routes->get('add-user', 'Home::tambah_user');
 
 // VALIDASI
 $routes->post('login', 'Admin::Login');
@@ -61,14 +52,8 @@ $routes->get('logout', 'Admin::logout');
 $routes->post('edit-pengguna', 'Admin::directUpdateUser');
 $routes->post('edit-cok', 'Admin::Updateuser');
 
-// TAMBAH PRODUK
-$routes->get('direct_whatsApp', 'Produk::directWhatsApp');
-
 // KOMENTAR
 $routes->post('tambah_komentar', 'Komentar::inputKomentar');
-
-// MASUKAN MENU KE KERANJANG 
-$routes->post('tambah_keranjang', 'Keranjang::AddProdukToKeranjang');
 
 /* Dashboard User */
 $routes->get('user', 'User::getUser');
