@@ -55,16 +55,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  mx-auto ">
             <li class="nav-item">
-                <a class="nav-link" href="home">Home </a> 
+                <a class="nav-link" href="/">Home </a> 
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="menu">Menu <span class="sr-only">(current)</span> </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="tentang">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="register">Register</a>
               </li>
              <li class="nav-item">
                 <a class="nav-link" href="komentar">Komentar </a>
@@ -81,88 +78,8 @@
               </li>
 
               <?php } ?>
-              
-              <!-- Logout -->
-               <!-- <li>
-                <a class="btn btn-danger " href="#" data-toggle="modal" data-target="#logoutModal">
-                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                      Logout
-               </a>
-               </li> -->
 
             </ul>
-            <div class="user_option">
-              <a href="login" class="user_link">
-                <i class="fa fa-user" aria-hidden="true"></i>
-              </a>
-
-             <?php
-                 if(strcmp(session()->getTempData('is_login'), true) == 0){
-              ?>
-
-              <a class="cart_link" href="keranjang">
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                  <g>
-                    <g>
-                      <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                   c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                    </g>
-                  </g>
-                  <g>
-                    <g>
-                      <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                   C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                   c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                   C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                    </g>
-                  </g>
-                  <g>
-                    <g>
-                      <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                   c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                    </g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                </svg>
-              </a>
-
-                  <?php } ?>
-
-              <form class="form-inline">
-              </form>
-              <a href="" class="order_online">
-                Order Online
-              </a>
-            </div>
           </div>
         </nav>
       </div>
@@ -216,7 +133,7 @@
                     </h6>
                     
                     <!-- icon keranjang -->
-                    <form action="https://wa.me/+6282281412998" method="get"> 
+                    <form action="https://wa.me/+6288747586081" method="get"> 
                       <input type="hidden" name="text" value="<?= $m['nama_produk'] . "," . " " .number_format($m['harga_produk'])  ?>">
                       <button type="submit" class="btn">
                         <a>   
@@ -304,26 +221,6 @@
 
   <!-- end food section -->
 
-  <!-- logout modal -->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel"> Apakah Anda Yakin Ingin Keluar ? </h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body"> Silahkan Pilih "Logout" Untuk Keluar Dari Akun </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal"> Batal </button>
-                    <a class="btn btn-primary" href="login">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
   <!-- footer section -->
   <footer class="footer_section">
     <div class="container">
@@ -337,50 +234,26 @@
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
-                  Location
+                  Jl kucing durian 10
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  Call +62888888888
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  demo@gmail.com
+                  ah@gmail.com
                 </span>
               </a>
             </div>
           </div>
         </div>
         <div class="col-md-4 footer-col">
-          <div class="footer_detail">
-            <a href="" class="footer-logo">
-              Feane
-            </a>
-            <p>
-              Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with
-            </p>
-            <div class="footer_social">
-              <a href="">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-pinterest" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
+          
         </div>
         <div class="col-md-4 footer-col">
           <h4>
@@ -397,9 +270,8 @@
       <div class="footer-info">
         <p>
           &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a><br><br>
           &copy; <span id="displayYear"></span> Distributed By
-          <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+          <a href="https://themewagon.com/" target="_blank">Turquoise</a>
         </p>
       </div>
     </div>
